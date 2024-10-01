@@ -6,6 +6,7 @@ import {
 import { ConversationMessage } from "./ConversationMessage";
 import FunctionCallResult from "./FunctionCallResult";
 
+
 interface MessageListProps {
   messages: Message[];
   activeTranscript?: TranscriptMessage | null;
@@ -15,6 +16,7 @@ export function MessageList({ messages, activeTranscript }: MessageListProps) {
   console.log("messages", messages);
   return (
     <>
+      
       {messages.map((message, index) =>
         message.type === MessageTypeEnum.TRANSCRIPT ? (
           <ConversationMessage
